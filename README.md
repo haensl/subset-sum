@@ -9,13 +9,13 @@ Node.js module to compute solutions to the [Coin changing problem](http://rosett
 via `npm`
 
 ```bash
-npm i -S subset-sum
+npm i -S @haensl/subset-sum
 ```
 
 via `yarn`
 
 ```bash
-yarn add subset-sum
+yarn add @haensl/subset-sum
 ```
 
 2. Use the library in your code
