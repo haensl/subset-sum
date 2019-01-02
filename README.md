@@ -1,5 +1,10 @@
 # Subset sum
 
+[![NPM](https://nodei.co/npm/@haensl%2Fsubset-sum.png?downloads=true)](https://nodei.co/npm/@haensl%2Fsubset-sum/)
+
+[![npm version](https://badge.fury.io/js/@haensl%2Fsubset-sum.svg)](http://badge.fury.io/js/@haensl%2Fsubset-sum)
+[![Build Status](https://travis-ci.org/haensl/subset-sum.svg?branch=master)](https://travis-ci.org/haensl/subset-sum)
+
 Node.js module to compute solutions to the [Coin changing problem](http://rosettacode.org/wiki/Count_the_coins), i.e. find combinations of integers from a given set of available integers that sum up to a desired result.
 
 ## Quick start
