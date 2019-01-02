@@ -6,6 +6,9 @@
   "engines": {
     "node": ">=6"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "subset sum",
     "sum",
