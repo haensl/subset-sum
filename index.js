@@ -25,7 +25,7 @@ const isSameSolution = (a, b) => {
   return true;
 };
 
-const cleanSolutions = (solutions) =>
+const uniqueSolutions = (solutions) =>
   solutions
     .reduce((uniqueSolutions, solution) => {
       if (!uniqueSolutions.find(isSameSolution.bind(null, solution))) {
@@ -38,10 +38,10 @@ const cleanSolutions = (solutions) =>
 const sum = (numbers) =>
   numbers.reduce((sum, number) => sum + number, 0);
 
-const subsetSum = (numbers, target, partial = [], results = []) => {
+const subsetSum = function*(numbers, target, partial = []) {
   const s = sum(partial);
   if (s === target) {
-    results.push(partial);
+    yield partial;
   }
 
   if (s >= target) {
@@ -49,18 +49,16 @@ const subsetSum = (numbers, target, partial = [], results = []) => {
   }
 
   for (let i = 0; i < numbers.length; i++) {
-    subsetSum(
+    yield* subsetSum(
       numbers.slice(i + 1),
       target,
-      partial.concat([numbers[i]]),
-      results
+      [...partial, numbers[i]]
     );
   }
-
-  return cleanSolutions(results);
 };
 
 module.exports = {
   isSameSolution,
+  uniqueSolutions,
   subsetSum
 };
