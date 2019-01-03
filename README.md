@@ -30,13 +30,26 @@ yarn add @haensl/subset-sum
 const sumService = require('subset-sum');
 const numbers = [1, 4, 2, 5, 1, 3];
 const target = 6;
-const solutions = sumService.subsetSum(numbers, target);
-console.log(solutions);
-// Output:
-// [ [ 1, 4, 1 ], [ 1, 2, 3 ], [ 1, 5 ], [ 4, 2 ] ]
+const solver = sumService.subsetSum(numbers, target);
+for (let solution of solver) {
+  console.log(solution);
+}
 ```
 
-### The library filters duplicate solutions!
+## API
+
+`subsetSum(numbers, target) => Generator`
+
+Returns a generator that yields arrays of integers from `numbers` that add up to `target`.
+
+`uniqueSolutions(solutions) => Array`
+
+Filters `solutions` for unique solutions.
+
+`isSameSolution(solutionA, solutionB) => boolean`
+
+Compares to solutions and determines if they are equal, i.e. contain the same integers. E.g. `[1, 1, 3, 1]` and `[1, 3, 1, 1]` are considered equal.
+
 
 ## [Changelog](CHANGELOG.md)
 
