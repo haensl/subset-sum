@@ -1,6 +1,6 @@
 {
   "name": "@haensl/subset-sum",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Find a combination of integers to reach a given sum.",
   "main": "index.js",
   "engines": {
@@ -29,11 +29,14 @@
     "twitter": "@h_p_d",
     "url": "https://hpdietz.com"
   },
+  "repository": "https://github.com/haensl/subset-sum/subset-sum.git",
+  "bugs": "https://github.com/haensl/subset-sum/issues",
+  "homepage": "https://github.com/haensl/subset-sum#readme",
   "license": "MIT",
   "devDependencies": {
     "@haensl/eslint-config": "^1.3.0",
     "chai": "^4.2.0",
-    "eslint": "^5.11.1",
+    "eslint": "^5.13.0",
     "husky": "^1.3.1",
     "mocha": "^5.2.0"
   }
