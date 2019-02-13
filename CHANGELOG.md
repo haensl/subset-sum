@@ -1,3 +1,6 @@
+## 2.0.1
+* [#5: Update dependencies.](https://github.com/haensl/subset-sum/issues/5)
+
 ## 2.0.0
 * Change service mechanics to generator pattern.
 
@@ -6,3 +9,4 @@
 
 ## 1.0.0
 * Initial implementation.
+
