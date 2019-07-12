@@ -1,3 +1,6 @@
+## 2.0.2
+* [#7: Update dependencies.](https://github.com/haensl/subset-sum/issues/7)
+
 ## 2.0.1
 * [#5: Update dependencies.](https://github.com/haensl/subset-sum/issues/5)
 
