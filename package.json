@@ -1,6 +1,6 @@
 {
   "name": "@haensl/subset-sum",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Find a combination of integers to reach a given sum.",
   "main": "index.js",
   "engines": {
