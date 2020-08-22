@@ -4,6 +4,7 @@
   * ESM
   * CJS
   * UMD
+* Replace `mocha` with `jest`.
 
 ## 2.0.2
 * [#7: Update dependencies.](https://github.com/haensl/subset-sum/issues/7)
