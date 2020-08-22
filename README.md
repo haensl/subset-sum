@@ -3,7 +3,7 @@
 [![NPM](https://nodei.co/npm/@haensl%2Fsubset-sum.png?downloads=true)](https://nodei.co/npm/@haensl%2Fsubset-sum/)
 
 [![npm version](https://badge.fury.io/js/@haensl%2Fsubset-sum.svg)](http://badge.fury.io/js/@haensl%2Fsubset-sum)
-[![Build Status](https://travis-ci.org/haensl/subset-sum.svg?branch=master)](https://travis-ci.org/haensl/subset-sum)
+[![CircleCI](https://circleci.com/gh/haensl/subset-sum.svg?style=svg)](https://circleci.com/gh/haensl/subset-sum)
 
 Node.js module to compute solutions to the [Coin changing problem](http://rosettacode.org/wiki/Count_the_coins), i.e. find combinations of integers from a given set of available integers that sum up to a desired result.
 
@@ -25,12 +25,29 @@ yarn add @haensl/subset-sum
 
 2. Use the library in your code
 
+in CommonJS _(e.g. Node.js)_
 
 ```javascript
-const sumService = require('subset-sum');
+const sumService = require('@haensl/subset-sum');
+
 const numbers = [1, 4, 2, 5, 1, 3];
 const target = 6;
 const solver = sumService.subsetSum(numbers, target);
+
+for (let solution of solver) {
+  console.log(solution);
+}
+```
+
+in ESM _(e.g. Browser)_
+
+```javascript
+import sumService from '@haensl/subset-sum';
+
+const numbers = [1, 4, 2, 5, 1, 3];
+const target = 6;
+const solver = sumService.subsetSum(numbers, target);
+
 for (let solution of solver) {
   console.log(solution);
 }
