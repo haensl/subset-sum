@@ -57,7 +57,7 @@ const subsetSum = function*(numbers, target, partial = []) {
   }
 };
 
-module.exports = {
+export default {
   isSameSolution,
   uniqueSolutions,
   subsetSum

@@ -1,8 +1,13 @@
 {
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 11
+  },
   "env": {
     "es6": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "jest": true
   },
   "extends": "@haensl"
 }
