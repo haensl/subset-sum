@@ -53,6 +53,8 @@ for (let solution of solver) {
 }
 ```
 
+### [→ Codepen Example](https://codepen.io/haensl/pen/QWNdKGR)
+
 ## API
 
 `subsetSum(numbers, target) => Generator`

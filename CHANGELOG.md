@@ -1,3 +1,8 @@
+## 3.0.0
+* [#15: Add Codepen Example.](https://github.com/haensl/subset-sum/issues/15)
+* [#16: Typecheck generator arguments.](https://github.com/haensl/subset-sum/issues/16)
+* Lift minimum Node.js version to `10.12.0`
+
 ## 2.1.0
 * [#13: Migrate to CircleCI.](https://github.com/haensl/subset-sum/issues/13)
 * Bundle via rollup to
