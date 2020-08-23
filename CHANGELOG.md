@@ -1,3 +1,11 @@
+## 2.1.0
+* [#13: Migrate to CircleCI.](https://github.com/haensl/subset-sum/issues/13)
+* Bundle via rollup to
+  * ESM
+  * CJS
+  * UMD
+* Replace `mocha` with `jest`.
+
 ## 2.0.3
 * [#10: Update dependencies.](https://github.com/haensl/subset-sum/issues/10)
 

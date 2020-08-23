@@ -1,3 +1,8 @@
 *.md
 .*
 *.test.js
+*.config.js
+*.setup.js
+*.tgz
+src/
+test-results/

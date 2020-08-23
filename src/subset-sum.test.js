@@ -1,5 +1,4 @@
-const expect = require('chai').expect;
-const sumService = require('./');
+import sumService from './';
 
 describe('subsetSum()', () => {
   let solver;
@@ -16,14 +15,16 @@ describe('subsetSum()', () => {
     });
 
     it('returns an array as value', () => {
-      expect(Array.isArray(solution.value)).to.be.true;
+      expect(
+        Array.isArray(solution.value)
+      ).toBe(true);
     });
 
     it(`returns an array numbers equating to ${target}`, () => {
       expect(
         solution.value.reduce(
           (sum, num) => sum + num, 0)
-      ).to.equal(target);
+      ).toEqual(target);
     });
 
     it('returns the all possible solutions', () => {
@@ -33,7 +34,8 @@ describe('subsetSum()', () => {
         solution = solver.next();
       }
 
-      expect(numSolutions).to.equal(38);
+      expect(numSolutions)
+        .toEqual(38);
     });
 
     it('is iterable', () => {
@@ -43,7 +45,9 @@ describe('subsetSum()', () => {
         }
       };
 
-      expect(f).not.to.throw;
+      expect(f)
+        .not
+        .toThrow();
     });
   });
 });
@@ -58,15 +62,18 @@ describe('uniqueSolutions()', () => {
   });
 
   it('returns only unique solutions', () => {
-    expect(uniqueSolutions.length).to.equal(2);
+    expect(uniqueSolutions.length)
+      .toEqual(2);
   });
 
   it('returns only unique solutions', () => {
-    expect(uniqueSolutions[0]).to.eql([1, 2, 3]);
+    expect(uniqueSolutions[0])
+      .toEqual([1, 2, 3]);
   });
 
   it('returns only unique solutions', () => {
-    expect(uniqueSolutions[1]).to.eql([1, 1, 1]);
+    expect(uniqueSolutions[1])
+      .toEqual([1, 1, 1]);
   });
 });
 
@@ -81,7 +88,8 @@ describe('isSameSolution()', () => {
     });
 
     it('returns true', () => {
-      expect(sumService.isSameSolution(a, b)).to.be.true;
+      expect(sumService.isSameSolution(a, b))
+        .toBe(true);
     });
   });
 
@@ -92,7 +100,8 @@ describe('isSameSolution()', () => {
     });
 
     it('returns false', () => {
-      expect(sumService.isSameSolution(a, b)).to.be.false;
+      expect(sumService.isSameSolution(a, b))
+        .toBe(false);
     });
   });
 });
