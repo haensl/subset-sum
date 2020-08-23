@@ -39,6 +39,21 @@ const sum = (numbers) =>
   numbers.reduce((sum, number) => sum + number, 0);
 
 const subsetSum = function*(numbers, target, partial = []) {
+  if (!(Array.isArray(numbers)
+   && numbers.every(
+     (number) =>
+       typeof number === 'number'
+        && !Number.isNaN(number)
+   )
+  )) {
+    throw new TypeError('numbers must be array of numbers');
+  }
+
+  if (typeof target !== 'number'
+    || Number.isNaN(target)) {
+    throw new TypeError('target must be number');
+  }
+
   const s = sum(partial);
   if (s === target) {
     yield partial;
