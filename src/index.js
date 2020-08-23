@@ -49,8 +49,8 @@ const subsetSum = function*(numbers, target, partial = []) {
     throw new TypeError('numbers must be array of numbers');
   }
 
-  if (!(typeof target === 'number'
-    && !Number.isNaN(target))) {
+  if (typeof target !== 'number'
+    || Number.isNaN(target)) {
     throw new TypeError('target must be number');
   }
 
