@@ -5,6 +5,33 @@ describe('subset-sum', () => {
   let solution;
   const target = 6;
 
+  describe('numbers is not array', () => {
+    it('throws a TypeError', () => {
+      expect(() => {
+        solver = sumService.subsetSum('foo');
+        solver.next();
+      }).toThrow(TypeError);
+    });
+  });
+
+  describe('numbers is not array of numbers', () => {
+    it('throws a TypeError', () => {
+      expect(() => {
+        solver = sumService.subsetSum(['foo']);
+        solver.next();
+      }).toThrow(TypeError);
+    });
+  });
+
+  describe('target is not a number', () => {
+    it('throws a TypeError', () => {
+      expect(() => {
+        solver = sumService.subsetSum([1, 2, 3], NaN);
+        solver.next();
+      }).toThrow(TypeError);
+    });
+  });
+
   describe(`given numbers that add up to ${target}`, () => {
     beforeEach(() => {
       solver = sumService.subsetSum(
