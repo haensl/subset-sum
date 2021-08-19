@@ -1,3 +1,6 @@
+## 3.0.1
+* [#19: Update dependencies.](https://github.com/haensl/subset-sum/issues/19)
+
 ## 3.0.0
 * [#15: Add Codepen Example.](https://github.com/haensl/subset-sum/issues/15)
 * [#16: Typecheck generator arguments.](https://github.com/haensl/subset-sum/issues/16)
