@@ -1,6 +1,6 @@
 {
   "name": "@haensl/subset-sum",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Find a combination of integers to reach a given sum.",
   "main": "dist/subset-sum.cjs.js",
   "module": "dist/subset-sum.esm.js",
@@ -99,6 +99,7 @@
     "twitter": "@h_p_d",
     "url": "https://hpdietz.com"
   },
+  "funding": "https://github.com/sponsors/haensl",
   "repository": "https://github.com/haensl/subset-sum/subset-sum.git",
   "bugs": "https://github.com/haensl/subset-sum/issues",
   "homepage": "https://github.com/haensl/subset-sum#readme",

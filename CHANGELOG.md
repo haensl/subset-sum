@@ -1,3 +1,7 @@
+## 3.0.3
+* [#23: Add funding information.](https://github.com/haensl/subset-sum/issues/24)
+* Update dependencies.
+
 ## 3.0.2
 * [#21: Update dependencies.](https://github.com/haensl/subset-sum/issues/21)
 
