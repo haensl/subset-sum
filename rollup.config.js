@@ -2,7 +2,7 @@ const nodeResolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
 const localResolve = require('@haensl/rollup-plugin-local-resolve');
 const commonJS = require('@rollup/plugin-commonjs');
-const minify = require('rollup-plugin-terser').terser;
+const minify = require('@rollup/plugin-terser');
 const pkg = require('./package');
 
 const copyright = `// ${pkg.homepage} v${pkg.version} Copyright ${(new Date()).getFullYear()} ${pkg.author.name} <${pkg.author.email}>`;
