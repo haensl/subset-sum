@@ -49,7 +49,8 @@ commands:
     steps:
       - checkout
       - restore_cache:
-          keys: subset-sum-dependencies-{{ checksum "package-lock.json" }}
+          keys:
+            - subset-sum-dependencies-{{ checksum "package-lock.json" }}
       - run:
           name: install dependencies
           command: npm i
@@ -72,19 +73,6 @@ commands:
           command: |
             mkdir << parameters.project_name >>
             cd << parameters.project_name >> && npm init -y
-
-  package-information:
-    steps:
-      - run:
-          name: install tree
-          command: sudo apt-get -y install tree
-      - run:
-          name: gather bundle information
-          command: |
-            npm info @haensl/subset-sum@${VERSION} > ./bundle.info
-            tree -s node_modules/@haensl/subset-sum >> ./bundle.info
-      - store_artifacts:
-          path: bundle.info
 
 workflows:
   version: 2
@@ -128,7 +116,7 @@ workflows:
 jobs:
   lint:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     working_directory: ~/subset-sum
     steps:
       - init
@@ -144,7 +132,7 @@ jobs:
 
   test:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     working_directory: ~/subset-sum
     steps:
       - init
@@ -157,7 +145,7 @@ jobs:
 
   bundle:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     working_directory: ~/subset-sum
     steps:
       - init
@@ -192,7 +180,7 @@ jobs:
 
   bundle-test-cjs-js:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     steps:
       - init
       - attach_workspace:
@@ -229,7 +217,7 @@ jobs:
 
   bundle-test-esm-js:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     steps:
       - init
       - attach_workspace:
@@ -258,7 +246,7 @@ jobs:
 
   ensure-versioned-correctly:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     working_directory: ~/subset-sum
     steps:
       - init
@@ -289,7 +277,7 @@ jobs:
 
   publish:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     working_directory: ~/subset-sum
     steps:
       - init
@@ -304,7 +292,7 @@ jobs:
 
   package-test-esm-js:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     steps:
       - init
       - attach_workspace:
@@ -329,11 +317,10 @@ jobs:
           working_directory: /tmp/esm-test
           command: |
             npm test
-      - package-information
 
   package-test-cjs-js:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:lts
     steps:
       - init
       - attach_workspace:
