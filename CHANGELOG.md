@@ -1,5 +1,6 @@
 ## 3.0.6
 * [#33: Update dependencies.](https://github.com/haensl/subset-sum/issues/33)
+* Migrate to new CircleCI Node.js images.
 
 ## 3.0.5
 * [#31: Update dependencies.](https://github.com/haensl/subset-sum/issues/31)
